@@ -1,7 +1,9 @@
-function Home() {
+const Home = () => {
   return (
-    <div>Home</div>
-  )
+    <div className="w-full h-full flex justify-center items-center">
+      
+    </div>
+  );
 }
 
-export default Home
+export default Home;
