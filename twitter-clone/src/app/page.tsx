@@ -39,22 +39,25 @@ const Home = () => {
     <div className="w-full h-full flex justify-center items-center relative bg-black">
       <div className="max-w-screen-xl w-full h-full flex relative">
         /* Left sidebar for navigation/header */
-        <section className="fixed w-72 flex flex-col h-screen space-y-4 my-4">
-          {NAVIGATION_ITEMS.map((item) => (
-            <Link 
-              className="hover:bg-white/10 text-2xl transition duration-200 flex items-center justify-start w-fit space-x-4 rounded-3xl py-2 px-6"
-              href={`/${item.title.toLowerCase()}`}
-              key={item.title}
-            >
-              <div>
-                <item.icon />
-              </div>
-              {item.title !== 'Twitter' && <div>{item.title}</div>}
-            </Link>  
-          ))}
-          <button className="rounded-full m-4 bg-primary p-4 text-2xl text-center hover:bg-opacity-70 transition duration-200">
-            Tweet
-          </button>      
+        <section className="fixed w-[275px] flex flex-col items-stretch h-screen space-y-4 my-4">
+          <div className="flex flex-col items-stretch h-screen space-y-4 my-4">
+              {NAVIGATION_ITEMS.map((item) => (
+                <Link 
+                  className="hover:bg-white/10 text-2xl transition duration-200 flex items-center justify-start w-fit space-x-4 rounded-3xl py-2 px-6"
+                  href={`/${item.title.toLowerCase()}`}
+                  key={item.title}
+                >
+                  <div>
+                    <item.icon />
+                  </div>
+                  {item.title !== 'Twitter' && <div>{item.title}</div>}
+                </Link>  
+              ))}
+              <button className="rounded-full m-4 bg-primary p-4 text-2xl text-center hover:bg-opacity-70 transition duration-200">
+                Tweet
+              </button>
+          </div>
+          <div className="">At the bottom</div>      
         </section>
         <main>Home timeline</main>
         <section>Right section</section>
