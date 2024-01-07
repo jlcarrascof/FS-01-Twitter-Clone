@@ -50,11 +50,12 @@ const Home = () => {
               <div>
                 <item.icon />
               </div>
-              <div>
-                {item.title}
-              </div>    
+              {item.title !== 'Twitter' && <div>{item.title}</div>}
             </Link>  
-          ))}  
+          ))}
+          <button className="">
+            Tweet
+          </button>      
         </section>
         <main>Home timeline</main>
         <section>Right section</section>
