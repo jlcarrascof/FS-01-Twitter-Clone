@@ -1,7 +1,6 @@
 import { BiHomeCircle, BiUser } from 'react-icons/bi';
 import { HiOutlineHashtag } from 'react-icons/hi';
-import { BsBell, BsBookmark, BsTwitter } from 'react-icons/bs';
-import { HiEnvelope } from 'react-icons/hi2';
+import { BsBell, BsBookmark, BsTwitter, BsEnvelope } from 'react-icons/bs';
 import Link from 'next/link';
 
 const NAVIGATION_ITEMS = [
@@ -23,7 +22,7 @@ const NAVIGATION_ITEMS = [
   },
   {
     title: 'Messages',
-    icon: HiEnvelope
+    icon: BsEnvelope
   },
   {
     title: 'Bookmarks',
@@ -53,7 +52,7 @@ const Home = () => {
               {item.title !== 'Twitter' && <div>{item.title}</div>}
             </Link>  
           ))}
-          <button className="">
+          <button className="rounded-full m-4 bg-primary p-4 text-2xl text-center hover:bg-opacity-70 transition duration-200">
             Tweet
           </button>      
         </section>
