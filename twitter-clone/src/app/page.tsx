@@ -6,6 +6,10 @@ import Link from 'next/link';
 
 const NAVIGATION_ITEMS = [
   {
+    title: 'Twitter',
+    icon: BsTwitter
+  },
+  {
     title: 'Home',
     icon: BiHomeCircle
   },
@@ -34,15 +38,12 @@ const NAVIGATION_ITEMS = [
 const Home = () => {
   return (
     <div className="w-full h-full flex justify-center items-center relative bg-black">
-      <div className="max-w-screen-lg w-full h-full flex relative">
+      <div className="max-w-screen-xl w-full h-full flex relative">
         /* Left sidebar for navigation/header */
-        <section className="fixed w-72 flex flex-col h-screen">
-          <Link href={"/"} className="my-4">
-            <BsTwitter />
-          </Link>
+        <section className="fixed w-72 flex flex-col h-screen space-y-4 my-4">
           {NAVIGATION_ITEMS.map((item) => (
             <Link 
-              className="hover:bg-white/10 transition duration-200 flex items-center justify-center space-x-2 rounded-3xl p-4"
+              className="hover:bg-white/10 text-2xl transition duration-200 flex items-center justify-start w-fit space-x-4 rounded-3xl py-2 px-6"
               href={`/${item.title.toLowerCase()}`}
               key={item.title}
             >
